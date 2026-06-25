@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2563eb" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Habit Tracker</title>
+</head>
+<body>
+  <main class="app">
+    <h1>Habit Tracker</h1>
+
+    <section class="card">
+      <input id="habitInput" type="text" placeholder="Add a habit..." />
+      <button id="addBtn">Add Habit</button>
+    </section>
+
+    <section class="card">
+      <h2>Your Habits</h2>
+      <ul id="habitList"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./sw.js");
+    }
+  </script>
+</body>
+</html>
